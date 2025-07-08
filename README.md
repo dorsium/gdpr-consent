@@ -18,7 +18,7 @@
 ## Installation
 
 ```bash
-pnpm install @dorsium/gdpr
+npm install @dorsium/gdpr
 ```
 
 ## Usage
@@ -79,7 +79,7 @@ These flags are kept indefinitely in `localStorage` until you clear them. No per
 ## Build
 
 ```bash
-pnpm build
+npm run build
 ```
 
 ## License
