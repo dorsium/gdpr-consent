@@ -70,6 +70,12 @@ export default function Footer() {
 ## Configuration
 No configuration needed. Automatically saves user choices under `localStorage['dorsium_consent']`.
 
+Only two boolean values are stored:
+- `analytics`
+- `marketing`
+
+These flags are kept indefinitely in `localStorage` until you clear them. No personal data is stored.
+
 ## Build
 
 ```bash
