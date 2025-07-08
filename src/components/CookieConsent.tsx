@@ -79,7 +79,7 @@ export default function CookieConsent() {
       </div>
       <div className="flex justify-between items-center mt-6">
         <button className="text-sm underline" onClick={() => setVisible(false)}>
-          Cookie Settings
+          Close
         </button>
         <div className="flex gap-2">
           <button
@@ -87,6 +87,12 @@ export default function CookieConsent() {
             onClick={handleDecline}
           >
             Decline
+          </button>
+          <button
+            className="bg-gray-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-600"
+            onClick={handleSave}
+          >
+            Save preferences
           </button>
           <button
             className="bg-dorsium text-white px-4 py-2 rounded-lg text-sm hover:opacity-90"
