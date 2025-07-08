@@ -77,7 +77,7 @@ pnpm build
 ```
 
 ## License
-MIT — free to use for personal and commercial projects.
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
