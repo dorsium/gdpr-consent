@@ -1,6 +1,6 @@
 {
   "name": "@dorsium/gdpr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight GDPR & Cookie Consent module for Next.js projects. Built by Dorsium",
   "license": "MIT",
   "author": "Dorsium",
@@ -27,7 +27,8 @@
   "files": ["dist"],
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch"
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm version patch"
   },
   "peerDependencies": {
     "react": ">=17",
