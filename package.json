@@ -1,6 +1,6 @@
 {
   "name": "@dorsium/gdpr",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Lightweight GDPR & Cookie Consent module for Next.js projects. Built by Dorsium",
   "license": "MIT",
   "author": "Dorsium",
