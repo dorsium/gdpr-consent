@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { ConsentPrefs, defaultPrefs } from "../components/CookieConsent";
-
-const COOKIE_KEY = "dorsium_consent";
+import {
+  COOKIE_KEY,
+  ConsentPrefs,
+  defaultPrefs,
+} from "../lib/consent";
 
 export function useConsent() {
   const [consent, setConsent] = useState<ConsentPrefs>(defaultPrefs);

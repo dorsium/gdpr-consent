@@ -1,18 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-const COOKIE_KEY = "dorsium_consent";
-
-export type ConsentPrefs = {
-  analytics: boolean;
-  marketing: boolean;
-};
-
-export const defaultPrefs: ConsentPrefs = {
-  analytics: false,
-  marketing: false,
-};
+import {
+  COOKIE_KEY,
+  ConsentPrefs,
+  defaultPrefs,
+} from "../lib/consent";
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
