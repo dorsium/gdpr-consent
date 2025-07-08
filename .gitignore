@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+.pnpm
+dist
+
+# build
+*.log
+*.tsbuildinfo
+
+# IDE
+.vscode
+.idea
+
+# system
+.DS_Store
+Thumbs.db
+
+# misc
+.env

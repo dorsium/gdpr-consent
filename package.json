@@ -1,0 +1,44 @@
+{
+  "name": "@dorsium/gdpr",
+  "version": "1.0.0",
+  "description": "Lightweight GDPR & Cookie Consent module for Next.js projects. Built by Dorsium",
+  "license": "MIT",
+  "author": "Dorsium",
+  "homepage": "https://dorsium.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dorsium/gdpr-consent.git"
+  },
+  "keywords": [
+    "gdpr",
+    "cookie-consent",
+    "nextjs",
+    "react",
+    "privacy",
+    "consent",
+    "dorsium",
+    "cookie-banner",
+    "nextjs-plugin",
+    "tailwind"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "husky": "^8.0.0"
+  },
+  "packageManager": "pnpm@10.12.4"
+}
