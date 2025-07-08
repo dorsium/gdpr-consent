@@ -33,7 +33,7 @@ export function useConsent() {
     readPrefs(localStorage.getItem(COOKIE_KEY));
     window.addEventListener("storage", handleStorage);
     return () => window.removeEventListener("storage", handleStorage);
-  });
+  }, []);
 
   const hasConsent = (key: keyof ConsentPrefs) => !!consent[key];
 
