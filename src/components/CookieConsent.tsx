@@ -66,15 +66,6 @@ export default function CookieConsent() {
         <label className="flex items-center gap-2 text-sm">
           <input
             type="checkbox"
-            checked={prefs.analytics}
-            onChange={() => handleChange("analytics")}
-            className="accent-dorsium"
-          />
-          Analytics
-        </label>
-        <label className="flex items-center gap-2 text-sm">
-          <input
-            type="checkbox"
             checked={prefs.marketing}
             onChange={() => handleChange("marketing")}
             className="accent-dorsium"
