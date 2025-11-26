@@ -26,15 +26,16 @@ export default function CookieConsent() {
   }, []);
 
   const handleAcceptAll = () => {
-    const all = { analytics: true, marketing: true };
+    const all = { analytics: false, marketing: true };
     localStorage.setItem(COOKIE_KEY, JSON.stringify(all));
     dispatchUpdate(all);
     setVisible(false);
   };
 
-  const handleDecline = () => {
-    localStorage.setItem(COOKIE_KEY, JSON.stringify(defaultPrefs));
-    dispatchUpdate(defaultPrefs);
+  const handleAcceptNecessary = () => {
+    const necessary = { analytics: false, marketing: false };
+    localStorage.setItem(COOKIE_KEY, JSON.stringify(necessary));
+    dispatchUpdate(necessary);
     setVisible(false);
   };
 
@@ -52,16 +53,25 @@ export default function CookieConsent() {
 
   return (
     <div className="fixed bottom-4 left-4 right-4 max-w-xl mx-auto bg-gray-900 text-white p-6 rounded-2xl shadow-xl z-50">
-      <h2 className="text-lg font-semibold flex items-center gap-2">
-        🍪 We value your privacy
-      </h2>
+      <div className="flex justify-between items-start mb-3">
+        <h2 className="text-lg font-semibold flex items-center gap-2">
+          🍪 We value your privacy
+        </h2>
+        <button
+          onClick={() => setVisible(false)}
+          className="text-gray-400 hover:text-white text-xl leading-none -mt-1"
+          aria-label="Close"
+        >
+          ×
+        </button>
+      </div>
       <p className="text-sm text-gray-300 mt-2">
         This website uses cookies to ensure basic functionality and to analyze traffic.
       </p>
       <div className="flex flex-wrap gap-3 mt-4">
         <label className="flex items-center gap-2 text-sm">
           <input type="checkbox" checked disabled className="accent-dorsium" />
-          Necessary
+          Necessary (Always enabled)
         </label>
         <label className="flex items-center gap-2 text-sm">
           <input
@@ -73,30 +83,25 @@ export default function CookieConsent() {
           Marketing
         </label>
       </div>
-      <div className="flex justify-between items-center mt-6">
-        <button className="text-sm underline" onClick={() => setVisible(false)}>
-          Close
+      <div className="flex justify-end items-center gap-2 mt-6 flex-wrap">
+        <button
+          className="bg-gray-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-600"
+          onClick={handleAcceptNecessary}
+        >
+          Accept Necessary Only
         </button>
-        <div className="flex gap-2">
-          <button
-            className="bg-gray-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-600"
-            onClick={handleDecline}
-          >
-            Decline
-          </button>
-          <button
-            className="bg-gray-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-600"
-            onClick={handleSave}
-          >
-            Save preferences
-          </button>
-          <button
-            className="bg-dorsium text-white px-4 py-2 rounded-lg text-sm hover:opacity-90"
-            onClick={handleAcceptAll}
-          >
-            Accept All
-          </button>
-        </div>
+        <button
+          className="bg-gray-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-600"
+          onClick={handleSave}
+        >
+          Save Preferences
+        </button>
+        <button
+          className="bg-dorsium text-white px-4 py-2 rounded-lg text-sm hover:opacity-90"
+          onClick={handleAcceptAll}
+        >
+          Accept All
+        </button>
       </div>
       <p className="mt-4 text-xs text-gray-500">Powered by Dorsium</p>
     </div>

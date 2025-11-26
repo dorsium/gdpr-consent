@@ -6,4 +6,6 @@ export default defineConfig({
   dts: true,
   minify: false,
   clean: true,
+  external: ["react", "react-dom"],
+  noExternal: [],
 })
